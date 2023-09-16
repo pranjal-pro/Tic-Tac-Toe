@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(255, 230, 197);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+h1{
+    text-align: center;
+    color: rgb(176, 100, 0);
+    font-size: 5vmin;
+    margin: 2vmin 0;
+}
+h4{
+    text-align: center;
+    font-size: 2.5vmin;
+    color: rgb(176, 100, 0);
+    text-decoration: dashed rgb(176, 100, 0) underline;
+}
+.board{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 77vmin;
+    /* background-color: rgb(0, 0, 0); */
+    margin: 2.5vmin auto;
+    gap: 1vmin;
+    position: relative;
+}
+.board div.box {
+    width: 24.5vmin;
+    height: 24.5vmin;
+    border: solid rgb(0, 0, 0) .25vmin;
+    border-radius: 5%;
+    background-color: blanchedalmond;
+    color: rgb(77, 43, 3);
+    font-size: 15vmin;
+    line-height: 24.5vmin;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    text-align: center;
+}
+.board div.box:hover{
+    height: 24vmin;
+    width: 24vmin;
+    border: solid black .5vmin;
+}
+.board div.box:active{
+    box-shadow: 0 0 5px black;
+}
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 2.5vmin;
+    width: 10vmin;
+    margin: auto;
+    background-color: antiquewhite;
+    transition: transform 1s ease-in box-shadow .25s ease-in-out;
+}
+button:hover{
+    border: .5px solid black;
+    box-shadow: .5vmin .5vmin 0px burlywood;
+    transform: translateX(-.5vmin) translateY(-.5vmin);
+
+}
+button:active{
+    border: .5px solid rgb(51, 51, 51);
+    background-color: rgb(255, 232, 201);
+    box-shadow: 0px 0px 0px burlywood;
+    transform: translateX(0) translateY(0);
+}
+.board .horizontal{
+    background-color: rgba(77, 42, 3, 0.5);
+    height: 1.5vmin;
+    border-radius: 5px;
+    width: 99%;
+    position: absolute;
+}
+.board .vertical{
+    background-color: rgba(77, 42, 3, 0.5);
+    height: 99%;
+    width: 1.5vmin;
+    border-radius: 5px;
+    position: absolute;
+}
+.board .diagonal{
+    background-color: rgba(77, 42, 3, 0.5);
+    height: calc(99% * 1.4);
+    width: 1.5vmin;
+    border-radius: 5px;
+    position: absolute;
+}
+.position1{
+    top: 15%;
+}
+.position2{
+    top: center;
+}
+.position3{
+    bottom: 15%;
+}
+.position4{
+    left: 15%;
+}
+.position5{
+    left: center;
+}
+.position6{
+    right: 15%;
+}
+.position7{
+    transform: rotate(-45deg);
+}
+.position8{
+    transform: rotate(45deg);
+}
